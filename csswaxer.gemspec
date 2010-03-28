@@ -2,13 +2,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{csswaxer}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Claudio Baccigalupo"]
   s.date = %q{2010-03-28}
   s.default_executable = %q{csswaxer}
-  s.description = %q{CSS files are written with a focus on selectors, so that all properties related to a tag, class or id are grouped together. This makes it hard to a have a clear overview of the style; for instance which colors and fonts are used in the whole site. CSS Waxer reorganizes CSS files focusing on properties, so that every font-related property is packed together, followed by colors, backgrounds, layouts and so on.}
+  s.description = %q{CSS Waxer refactors CSS files bringing the focus on properties, rather than on selectors. Typically, CSS files are written by groups of selectors, you first specify all the properties of <body>, then those of <h1>, #header, and so on. This makes it hard to catch a glimpse of the overall style of a site, such as the entire list of colors used, the fonts, or the dimensions. CSS Waxer reorders the lines of a CSS files so that properties are grouped together by family. In this way, you can rapidly check together all the fonts used, the colors, backgrounds, layouts and so on for the whole site.}
   s.email = %q{claudiob@gmail.com}
   s.executables = ["csswaxer"]
   s.extra_rdoc_files = ["LICENSE","README.md"]
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
-  s.summary = %q{Command-line tool that makes stylesheet files more readable, grouping lines by property (typography, color, layout, …) rather than by selector}
+  s.summary = %q{Command-line tool that makes stylesheet files more readable, grouping lines by property (typography, color, layout, etc.) rather than by selector}
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
