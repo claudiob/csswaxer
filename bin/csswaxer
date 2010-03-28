@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+## CSS Waxer is a command line interface for making CSS files more readable
+##
+## Usage: csswaxer [FILE or URL]
+##
+## Renders the waxed CSS file. Redirect the output to a file, if needed.
+##
+##
+ 
+require 'csswaxer'
+ 
+if ARGV.length < 1
+  puts "Usage: csswaxer [FILE or URL]."
+  exit
+end
+
+CssWaxer::wax(ARGV[0])
