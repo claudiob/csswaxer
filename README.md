@@ -1,30 +1,28 @@
-# RadioTagMap #
+# CssWaxer #
 
 Ruby command that prettifies CSS files grouping lines by property rather than by selector
 
-## Installation ##
+## Installation (from GemCutter) ##
 
     gem install csswaxer
 
-## Documentation ##
-
-[http://rdoc.info/projects/claudiob/csswaxer](http://rdoc.info/projects/claudiob/csswaxer)
-
 ## Examples ##
 
-### To create a KML map according to compare current 'Rock' and 'Country' songs 
-
-    require 'radiotagmap'
-    Radiotagmap::update_kml '/tmp/overlay.kml' [['Country','Alt-Country']]
+    csswaxer http://rubygems.org/stylesheets/all.css
+    csswaxer http://vlex.cachefly.net/stylesheets/new.css
 
 ## To do ##
 
 * Accept CSS files with commands split on multiple lines
 * Accept local CSS files, not only remote ones
 * Accept different media types, not only screen
-* Contain every possible CSS property, well organized 
+* Contain every possible CSS property
+* Re-organize families of properties in the output  (first font, then text...)
 
 ## History ##
+
+v0.0.2  2010/03/28
+        Fixed a bug; now also works on remote CSS files
 
 v0.0.1  2010/03/28
         First commit that only works on CSS files with one-line style.

@@ -4,6 +4,7 @@
 # Copyright:: Copyright (c) 2010 - see LICENSE file
 
 require 'css_parser'
+require 'open-uri'
 
 module CssWaxer
   class << self
@@ -14,7 +15,7 @@ module CssWaxer
       # Open either a local or a remote file depending on the path
       parser = CssParser::Parser.new    
       if dirty_css =~ /^https?:\/\/\S+$/i then
-        parser.load_remote! dirty_css
+        parser.load_uri! dirty_css
       else
         parser.load_file! dirty_css
       end
