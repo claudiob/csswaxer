@@ -30,13 +30,14 @@ module CssWaxer
           selector[:rules].each_declaration do |property, value, importance|
             # Clean recognized properties, leave untouched the remaining ones
             if css_properties.include?(property) && !value.nil?
-              if same_value = appeared_values[property].assoc(value)
+              # TODO: First check whether that same property was previously set for that selectors and therefore is replaced (unless important)
+              if same_value = appeared_values[property].assoc([value, importance])
                 same_value << selectors
               else
-                appeared_values[property] << [value, selectors]
+                appeared_values[property] << [[value, importance], selectors]
               end
             else
-              unrecognized_properties << [property, value, selectors]
+              unrecognized_properties << [property, value, importance, selectors]
             end
           end
         end
@@ -49,16 +50,18 @@ module CssWaxer
           next if appeared_values[property].empty?
           puts "\n/* #{property} */"
           appeared_values[property].each do |p|
-            value = p.shift
-            puts "#{p.join(", ")}\t{#{property}: #{value}}"
+            value, importance = p.shift
+            important = " !important" if importance
+            puts "#{p.join(", ")}\t{#{property}: #{value}#{important}}"
           end
         end
       end
       
       unless unrecognized_properties.empty?
         puts titleize("others")
-        unrecognized_properties.each do |property, value, selectors|
-          puts "#{selectors}\t{#{property}: #{value}}"      
+        unrecognized_properties.each do |property, value, importance, selectors|
+          important = " !important" if importance
+          puts "#{selectors}\t{#{property}: #{value}#{important}}"      
         end
       end
     end
