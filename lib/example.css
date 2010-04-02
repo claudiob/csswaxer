@@ -1,35 +1,4 @@
-a {line-height:12px}
+a {line-height:12px; font-size: 12px;}
+b,c {font-size:40px;}
 b {font-size:12px;}
 c, d {line-height: 12px}
-.e#f {line-height: 12px; font-weight: bold}
-g h {line-height: 12px; font-weight: bold;}
-i {line-height: .1em; font-weight: bold}
-j[k] {line-height: normal}
-lmn {line-height: 12px }
-o > p {line-heigddht:   12px }
-
-/* Outputs to: 
-/* ************************************************************************** *
-/* TYPOGRAPHY                                                                 *
-/* ************************************************************************** *
-
-/* font-size *
-b       {font-size: 12px}
-
-/* font-weight *
-.e#f, g h, i    {font-weight: bold}
-
-/* ************************************************************************** *
-/* SIZES                                                                      *
-/* ************************************************************************** *
-
-/* line-height *
-a, c, d, .e#f, g h, lmn {line-height: 12px}
-i       {line-height: .1em}
-j[k]    {line-height: normal}
-
-/* ************************************************************************** *
-/* OTHERS                                                                     *
-/* ************************************************************************** *
-o > p   {line-heigddht: 12px}
-*/
