@@ -19,6 +19,9 @@ Ruby command that prettifies CSS files grouping lines by property rather than by
 
 ## History ##
 
+v0.0.6  2010/04/32
+        Requires CSS Parser > 1.1.0 which includes load_file!
+
 v0.0.5  2010/04/32
         Fixed a bug; now respects multiple property values for the same selector
 
