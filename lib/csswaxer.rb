@@ -91,7 +91,7 @@ module CssWaxer
     def css_families
       # Based on the list from http://www.eskimo.com/~bloo/indexdot/css/
       [
-        ['Typography', %w{font-family font-size font-style font-variant font-weight font font-size-adjust font-stretch}],
+        ['Typography', %w{font-family font-size font-style font-variant font-weight font font-size-adjust font-stretch line-height}],
         ['Text', %w{word-spacing letter-spacing white-space word-wrap text-align text-align-last text-decoration text-transform text-shadow text-indent text-underline-position}],
         ['Colors', %w{color background-color layer-background-color border-top-color border-right-color border-bottom-color border-left-color border-color scrollbar-face-color scrollbar-arrow-color scrollbar-base-color scrollbar-shadow-color scrollbar-darkshadow-color scrollbar-highlight-color scrollbar-3dlight-color scrollbar-track-color outline-color}],
         ['Backgrounds', %w{layer-background-image background-image background-repeat background-attachment background-position background-position-x background-position-y background}], 
@@ -99,7 +99,7 @@ module CssWaxer
         ['Lists', %w{marker-offset list-style-type list-style-position list-style-image list-style}],
         ['Tables', %w{border-collapse border-spacing caption-side empty-cells speak-header table-layout}],
         ['Layout', %w{display visibility position float clear}],
-        ['Sizes', %w{width min-width max-width line-height 	height min-height max-height}],
+        ['Sizes', %w{width min-width max-width height min-height max-height}],
         ['Positions', %w{top right bottom left vertical-align 	overflow overflow-x overflow-y text-overflow clip z-index}],
         ['Margins', %w{margin-top margin-right margin-bottom margin-left margin}],
         ['Paddings', %w{padding-top padding-right padding-bottom padding-left padding}],
