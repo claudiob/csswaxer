@@ -1,4 +1,6 @@
 a {line-height:12px; font-size: 12px;}
 b,c {font-size:40px;}
-b {font-size:12px;}
+b {font-size:12px; font-weight: bold;}
 c, d {line-height: 12px}
+e {font-weight: bold; font-variant: small-caps;}
+f {font: italic normal bold 1em/1.5em Arial, sans-serif;}

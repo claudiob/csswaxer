@@ -22,6 +22,7 @@ module CssWaxer
       properties = {}
       # First make sure to take the most important property values for each selector
       parser.each_selector(:screen).each do |ruleset|
+        ruleset[:rules].expand_shorthand! # NOTE: list-style is not affected
         declarations = ruleset[:rules].instance_variable_get(:@declarations)
         ruleset[:rules].selectors.each do |selector|
           declarations.each do |property, values|
@@ -59,7 +60,7 @@ module CssWaxer
         puts titleize(family)
         properties.each do |property|
           next unless merged.has_key? property
-          puts "\n/* #{property} */"
+          puts "/* #{property} */"
           merged[property].each do |values, selectors|
             important = " !important" if values[1]
             puts "#{selectors.join(", ")}\t{#{property}: #{values[0]}#{important}}"
@@ -71,7 +72,7 @@ module CssWaxer
       unless merged.empty?
         puts titleize("Unrecognized properties")
         merged.each do |property, values_and_selectors|
-          puts "\n/* #{property} */"
+          puts "/* #{property} */"
           values_and_selectors.each do |values, selectors|
             important = " !important" if values[1]
             puts "#{selectors.join(", ")}\t{#{property}: #{values[0]}#{important}}"
