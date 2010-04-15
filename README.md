@@ -13,12 +13,19 @@ Ruby command that prettifies CSS files grouping lines by property rather than by
 
 ## To do ##
 
+* Add a proper wiki
 * Accept CSS files with commands split on multiple lines
 * Accept different media types, not only screen
 * Contain every possible CSS property
 * Align TABS for each property
 * Also expand shorthand property list-style (css_parser does not)
 * Recreate shorthand formats in the final output
+
+## Other styles of CSS Code Readability ##
+
+[Loud Dog](http://www.louddog.com/bloggity/2008/03/css-best-practices.php)
+
+[Smashing Magazine](http://www.smashingmagazine.com/2008/05/02/improving-code-readability-with-css-styleguides/)
 
 ## History ##
 
