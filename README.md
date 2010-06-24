@@ -47,6 +47,6 @@ v0.0.3  2010/03/28
 v0.0.1  2010/03/28
         First commit that only works on CSS files with one-line style.
 
-## Copyright ##
+## License ##
 
-Copyright (c) 2010 Claudio Baccigalupo. See LICENSE for details.
+Released in the public domain under the Ruby license. See LICENSE for details.
