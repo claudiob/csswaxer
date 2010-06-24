@@ -1,6 +1,6 @@
 # CssWaxer #
 
-Ruby command that prettifies CSS files grouping lines by property rather than by selector
+Ruby command-line tool that prettifies CSS files grouping lines by property rather than by selector
 
 ## Installation (from GemCutter) ##
 
