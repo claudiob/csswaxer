@@ -4,6 +4,7 @@ Ruby command-line tool that prettifies CSS files grouping lines by property rath
 
 ## Installation (from GemCutter) ##
 
+    sudo gem update --system  # in order to install dependencies
     gem install csswaxer
 
 ## Examples ##
@@ -28,6 +29,9 @@ Ruby command-line tool that prettifies CSS files grouping lines by property rath
 [Smashing Magazine](http://www.smashingmagazine.com/2008/05/02/improving-code-readability-with-css-styleguides/)
 
 ## History ##
+
+v0.0.8  2010/08/03
+        CSS Parser is no (longer) available as a gem in version 1.1.0. Fixed by creating a new gem called css_parser_1.1.0 and requiring that one instead
 
 v0.0.7  2010/04/03
         Expanded shorthand properties: background, font, margin, padding
