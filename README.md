@@ -30,6 +30,9 @@ Ruby command-line tool that prettifies CSS files grouping lines by property rath
 
 ## History ##
 
+v0.0.9  2014/06/05
+        Bump CSS Parser, which is now available as a gem again. Include iconv which is required.
+
 v0.0.8  2010/08/03
         CSS Parser is no (longer) available as a gem in version 1.1.0. Fixed by creating a new gem called css_parser_1.1.0 and requiring that one instead
 
@@ -44,7 +47,7 @@ v0.0.5  2010/04/02
 
 v0.0.4  2010/03/31
         Fixed a bug; now also respects !important statements
-         
+
 v0.0.3  2010/03/28
         Fixed a bug; now also works on remote CSS files
 

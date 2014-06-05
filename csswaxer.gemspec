@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{csswaxer}
-  s.version = "0.0.8"
+  s.version = "0.0.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Claudio Baccigalupo"]
@@ -24,11 +24,14 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<css_parser_1.1.0>, [">= 1.1.0"])
+      s.add_runtime_dependency(%q<css_parser>, [">= 1.3.5"])
+      s.add_runtime_dependency(%q<iconv>, [">= 1.0.4"])
     else
-      s.add_dependency(%q<css_parser_1.1.0>, [">= 1.1.0"])
+      s.add_dependency(%q<css_parser>, [">= 1.3.5"])
+      s.add_dependency(%q<iconv>, [">= 1.0.4"])
     end
   else
-    s.add_dependency(%q<css_parser_1.1.0>, [">= 1.1.0"])
+    s.add_dependency(%q<css_parser>, [">= 1.3.5"])
+    s.add_dependency(%q<iconv>, [">= 1.0.4"])
   end
 end

@@ -53,14 +53,14 @@ module CssWaxer
           end
         end
       end
-      
+
       # Finally write to CSS, ordered by family
       css_families.each do |family, properties|
         next unless merged.keys.any?{|property| properties.include? property}
         puts titleize(family)
         properties.each do |property|
           next unless merged.has_key? property
-          puts "/* #{property} */"
+          puts "\n/* #{property} */\n"
           merged[property].each do |values, selectors|
             important = " !important" if values[1]
             puts "#{selectors.join(", ")}\t{#{property}: #{values[0]}#{important}}"
@@ -72,7 +72,7 @@ module CssWaxer
       unless merged.empty?
         puts titleize("Unrecognized properties")
         merged.each do |property, values_and_selectors|
-          puts "/* #{property} */"
+          puts "\n/* #{property} */\n"
           values_and_selectors.each do |values, selectors|
             important = " !important" if values[1]
             puts "#{selectors.join(", ")}\t{#{property}: #{values[0]}#{important}}"
